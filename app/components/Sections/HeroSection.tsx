@@ -14,7 +14,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="pt-40 pb-30 px-6">
+    <section className="pt-40 pb-10 sm:pb-30 px-6">
       <div className="max-w-300 mx-auto flex flex-col items-center gap-10">
         <div className="space-y-5">
           <h2 className="text-4xl sm:text-5xl lg:text-7xl text-center font-bold max-w-xl lg:max-w-4xl mx-auto">
@@ -24,7 +24,7 @@ export default function HeroSection() {
             I build professional, mobile-friendly websites that help local
             businesses look credible online and turn visitors into customers.
           </p>
-          <div className="flex justify-center gap-4 sm:gap-6">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
             {links.map((link, id) => (
               <Link
                 href={"/"}

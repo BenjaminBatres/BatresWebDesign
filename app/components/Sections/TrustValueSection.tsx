@@ -27,10 +27,10 @@ export default function TrustValueSection() {
   return (
     <section className="py-20 px-6">
       <div className="max-w-300 mx-auto">
-        <h2 className="text-[49px] font-bold text-center mb-6">
+        <h2 className="text-[36px] sm:text-[39px] lg:text-[49px] leading-[120%] font-bold text-center mb-6">
           Why Your Business Needs a Website
         </h2>
-        <p className="text-lg text-center max-w-3xl mx-auto mb-16">
+        <p className="lg:text-lg text-center max-w-3xl mx-auto mb-12 lg:mb-16">
           Your customers are searching for your business online. Give them a
           professional place to learn about your services, see your work, and
           contact you.
