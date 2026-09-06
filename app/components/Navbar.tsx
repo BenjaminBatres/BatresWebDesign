@@ -9,12 +9,12 @@ export default function Navbar() {
       name: "Home",
     },
     {
-      path: "#about",
-      name: "About",
-    },
-    {
       path: "#projects",
       name: "Projects",
+    },
+    {
+      path: "#about",
+      name: "About",
     },
     {
       path: "#services",
