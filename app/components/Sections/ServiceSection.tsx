@@ -25,7 +25,7 @@ export default function ServiceSection() {
         "Give your outdated website a fresh, modern look with improved usability, mobile responsiveness, and a better experience for your customers.",
     },
     {
-      icon: <RiToolsFill className="text-[#6e6c7f]"/>,
+      icon: <RiToolsFill className="text-[#6e6c7f]" />,
       title: "Website Maintenance",
       description:
         "Keep your website running smoothly with ongoing updates, content changes, fixes, and technical support.",
@@ -40,16 +40,14 @@ export default function ServiceSection() {
         />
         <div className="grid md:grid-cols-2 gap-6">
           {services.map((service, id) => (
-            <div
-              key={id}
-              className="bg-white p-6 rounded-lg space-y-6"
-            >
+            <div key={id} className="bg-white p-6 rounded-lg space-y-6">
               <div className="size-20 bg-[#ebebeb] rounded-full flex justify-center items-center">
-                  <div className="text-4xl">{service.icon}</div>
-
+                <div className="text-4xl">{service.icon}</div>
               </div>
               <div className="space-y-3">
-                <h3 className="text-[25px]/[120%] font-bold">{service.title}</h3>
+                <h3 className="text-[25px]/[120%] font-bold">
+                  {service.title}
+                </h3>
                 <p>{service.description}</p>
               </div>
             </div>
