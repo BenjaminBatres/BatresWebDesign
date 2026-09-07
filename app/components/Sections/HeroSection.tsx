@@ -29,7 +29,7 @@ export default function HeroSection() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
             {links.map((link, id) => (
               <Link
-                href={"/"}
+                href={link.path}
                 key={id}
                 className={`px-6 py-3 font-medium ${link.theme} rounded-full`}
               >
