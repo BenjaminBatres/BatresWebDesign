@@ -4,7 +4,7 @@ import SectionHeader from "../ui/SectionHeader";
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="py-20 px-6">
+    <section id="projects" className="py-16 md:py-20 px-6">
       <div className="max-w-300 mx-auto space-y-12 lg:space-y-16">
         <SectionHeader title="Project" subtitle="Websites I've Built"/>
         <div className="grid md:grid-cols-2 gap-6">

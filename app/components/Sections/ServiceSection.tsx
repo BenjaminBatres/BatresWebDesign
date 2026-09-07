@@ -32,8 +32,8 @@ export default function ServiceSection() {
     },
   ];
   return (
-    <section id="services" className="py-20 px-6">
-      <div className="max-w-189 mx-auto space-y-16">
+    <section id="services" className="py-16 md:py-20 px-6">
+      <div className="max-w-189 mx-auto space-y-12 md:space-y-16">
         <SectionHeader
           title="Services"
           subtitle="Websites Built Around Your Business"

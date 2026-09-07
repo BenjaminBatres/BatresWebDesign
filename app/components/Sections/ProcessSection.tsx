@@ -24,11 +24,11 @@ export default function ProcessSection() {
         },
     ]
   return (
-    <section className='py-20 px-6'>
-        <div className="max-w-300 mx-auto space-y-16">
+    <section id='process' className='py-20 px-6'>
+        <div className="max-w-189 lg:max-w-300 mx-auto space-y-12 md:space-y-16">
             <SectionHeader title='Process' subtitle='Simple From Start to Finish'/>
-            <div className='grid grid-cols-4 gap-10 relative'>
-                <div className='absolute w-full h-0.5 bg-black top-12 -z-10'/>
+            <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-10 relative'>
+                <div className='hidden lg:block absolute w-full h-0.5 bg-black top-12 -z-10'/>
                 {processes.map((process, id) => (
                     <div key={id} className='bg-white flex flex-col p-6 rounded-2xl shadow-[12px_17px] border border-[#dfdfdf] hover:border-black duration-500 hover:scale-105'>
                         <p className='font-semibold text-black! text-lg mb-6'>0{id+1}</p>
