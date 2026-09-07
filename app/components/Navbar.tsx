@@ -17,6 +17,10 @@ export default function Navbar() {
       name: "Services",
     },
     {
+      path: "#process",
+      name: "Process",
+    },
+    {
       path: "#pricing",
       name: "Pricing",
     },
