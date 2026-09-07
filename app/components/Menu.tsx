@@ -30,12 +30,12 @@ export default function Menu({ links }: MenuProps) {
       </div>
 
       <div
-        className={`${isOpen ? "opacity-100 translate-y-0" : "opacity-0 pointer-events-none -translate-y-full"} absolute top-20 left-0 w-full duration-300`}
+        className={`${isOpen ? "opacity-100 translate-y-0" : "opacity-0 pointer-events-none -translate-y-full"} absolute top-20 left-0 w-full duration-300 z-20`}
       >
-        <div className="bg-white p-6 border-t">
+        <div className="bg-white p-6 border-t shadow-sm">
           <ul className="space-y-5">
             {links.map((link, id) => (
-              <Links key={id} name={link.name} path={link.path} />
+              <Links key={id} name={link.name} path={link.path} setIsOpen={setIsOpen}/>
             ))}
             <Link
               href={"#contact"}
@@ -46,6 +46,7 @@ export default function Menu({ links }: MenuProps) {
           </ul>
         </div>
       </div>
+      <div onClick={() => setIsOpen(false)} className={`fixed inset-0 -z-10`}/>
     </div>
   );
 }

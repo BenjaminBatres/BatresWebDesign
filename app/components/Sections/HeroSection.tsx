@@ -4,10 +4,12 @@ import HeroImg from "../../assets/undraw_designer_efwz.svg";
 export default function HeroSection() {
   const links = [
     {
+      path: '#project',
       name: "View My Work",
       theme: "bg-white text-black border",
     },
     {
+      path: '#contact',
       name: "Get a Free Quote",
       theme: "bg-black text-white",
     },
