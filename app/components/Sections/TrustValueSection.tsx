@@ -25,7 +25,7 @@ export default function TrustValueSection() {
     },
   ];
   return (
-    <section className="py-20 px-6">
+    <section className="py-16 md:py-20 px-6">
       <div className="max-w-300 mx-auto">
         <h2 className="text-[36px] sm:text-[39px] lg:text-[49px] leading-[120%] font-bold text-center mb-6">
           Why Your Business Needs a Website
