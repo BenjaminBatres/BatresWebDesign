@@ -4,12 +4,12 @@ import HeroImg from "../../assets/undraw_designer_efwz.svg";
 export default function HeroSection() {
   const links = [
     {
-      path: '#project',
+      path: "#projects",
       name: "View My Work",
       theme: "bg-white text-black border",
     },
     {
-      path: '#contact',
+      path: "#contact",
       name: "Get a Free Quote",
       theme: "bg-black text-white",
     },
@@ -38,7 +38,7 @@ export default function HeroSection() {
             ))}
           </div>
         </div>
-        <Image src={HeroImg} alt="" className="w-150" />
+        <Image src={HeroImg} alt="" loading="eager" className="w-150" />
       </div>
     </section>
   );

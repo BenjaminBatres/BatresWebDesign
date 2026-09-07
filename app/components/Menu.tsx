@@ -46,7 +46,7 @@ export default function Menu({ links }: MenuProps) {
           </ul>
         </div>
       </div>
-      <div onClick={() => setIsOpen(false)} className={`fixed inset-0 -z-10`}/>
+      <div onClick={() => setIsOpen(false)} className={`${isOpen ? '' : "pointer-events-none" }fixed inset-0 -z-10`}/>
     </div>
   );
 }
