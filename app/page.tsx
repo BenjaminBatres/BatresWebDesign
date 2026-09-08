@@ -4,6 +4,7 @@ import ProcessSection from "./components/Sections/ProcessSection";
 import ProjectsSection from "./components/Sections/ProjectsSection";
 import ServiceSection from "./components/Sections/ServiceSection";
 import TrustValueSection from "./components/Sections/TrustValueSection";
+import WhyWorkWithMeSection from "./components/Sections/WhyWorkWithMeSection";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <ServiceSection />
       <ProcessSection />
       <PricingSection />
+      <WhyWorkWithMeSection />
     </>
   );
 }
