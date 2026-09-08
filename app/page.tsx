@@ -1,3 +1,4 @@
+import FAQSection from "./components/Sections/FAQSection";
 import HeroSection from "./components/Sections/HeroSection";
 import PricingSection from "./components/Sections/PricingSection";
 import ProcessSection from "./components/Sections/ProcessSection";
@@ -16,6 +17,7 @@ export default function Home() {
       <ProcessSection />
       <PricingSection />
       <WhyWorkWithMeSection />
+      <FAQSection />
     </>
   );
 }
