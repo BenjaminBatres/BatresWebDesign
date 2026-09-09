@@ -32,22 +32,22 @@ export default function ProcessSection() {
     <section id="process" className="py-16 md:py-20 px-6">
       <div className="max-w-189 lg:max-w-300 mx-auto space-y-12 md:space-y-16">
         <SectionHeader title="Process" subtitle="Simple From Start to Finish" />
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 relative">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-10 relative">
           <motion.div
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 0.7, duration: 0.4 }}
+            transition={{ delay: 1, duration: 0.4 }}
             className="hidden lg:block absolute w-full h-0.5 bg-black top-12 -z-10"
           />
           {processes.map((process, id) => (
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ delay: id * 0.15, duration: 0.4 }}
+              transition={{ delay: id * 0.1, duration: 0.5 }}
               key={id}
-              className="bg-white flex flex-col p-6 rounded-2xl shadow-[12px_17px] border border-[#dfdfdf] hover:border-black duration-500 hover:scale-105"
+              className="bg-white flex flex-col p-6 rounded-2xl shadow-[12px_17px] border border-[#dfdfdf] hover:border-black duration-500 lg:hover:scale-105"
             >
               <p className="font-semibold text-black! text-lg mb-6">
                 0{id + 1}

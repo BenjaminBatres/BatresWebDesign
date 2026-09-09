@@ -25,10 +25,10 @@ export default function PricingPlan({
 }: IPlan) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-100px" }}
-      transition={{ delay: id * 0.15, duration: 0.3 }}
+      transition={{ delay: (id + 1) * 0.1, duration: 0.5 }}
       className="bg-white pt-8 px-6 pb-6 rounded-2xl border border-[#dfdfdf] space-y-8 relative md:hover:scale-105 duration-300 transition-all"
     >
       {id === 1 && (
