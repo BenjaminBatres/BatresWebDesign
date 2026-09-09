@@ -38,7 +38,8 @@ export default function Menu({ links }: MenuProps) {
               <Links key={id} name={link.name} path={link.path} setIsOpen={setIsOpen}/>
             ))}
             <Link
-              href={"#contact"}
+              href={"/contact"}
+              onClick={() => setIsOpen(false)}
               className="sm:hidden px-6 py-2 bg-black text-white rounded-full font-semibold"
             >
               Contact
