@@ -1,4 +1,3 @@
-import ContactSection from "./components/Sections/ContactSection";
 import FAQSection from "./components/Sections/FAQSection";
 import HeroSection from "./components/Sections/HeroSection";
 import PricingSection from "./components/Sections/PricingSection";

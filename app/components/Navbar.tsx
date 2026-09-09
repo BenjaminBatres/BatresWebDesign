@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Menu from "./Menu";
 import Links from "./ui/Links";
+import * as motion from "motion/react-client";
 
 export default function Navbar() {
   const links = [
@@ -30,12 +31,15 @@ export default function Navbar() {
     },
   ];
   return (
-    <header className="fixed px-6 w-full bg-white z-50">
+    <motion.header
+      initial={{ opacity: 0, y: -30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4 }}
+      className="fixed px-6 w-full bg-white z-50"
+    >
       <nav className="flex justify-between items-center max-w-300 mx-auto h-20">
         <h1 className="text-2xl sm:text-3xl font-bold">
-          <Link href={'/'}>
-          BatresWebDesign
-          </Link>
+          <Link href={"/"}>BatresWebDesign</Link>
         </h1>
 
         <ul className="hidden lg:flex gap-8">
@@ -53,6 +57,6 @@ export default function Navbar() {
           <Menu links={links} />
         </div>
       </nav>
-    </header>
+    </motion.header>
   );
 }
