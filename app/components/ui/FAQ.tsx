@@ -15,7 +15,7 @@ export default function FAQ({ title, description }: IFAQ) {
         className="bg-white rounded-lg cursor-pointer w-full"
       >
         <div className="flex justify-between items-center p-4">
-          <span className="md:text-xl font-semibold">{title}</span>
+          <span className="md:text-xl font-semibold text-left">{title}</span>
           <div className="flex justify-center items-center rounded-full size-8 bg-[#ebebeb]">
             <GoPlus
               className={`text-2xl transition-transform duration-300 ${
