@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "Batres Web Design",
     images: [
       {
-        url: "./assets/OpenGraphImg",
+        url: "/assets/OpenGraphImg.png",
         width: 1200,
         height: 630,
         alt: "Batres Web Design",
