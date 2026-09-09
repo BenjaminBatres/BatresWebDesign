@@ -60,7 +60,7 @@ export default function HeroSection() {
         <motion.figure
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-250px" }}
           transition={{ delay: 0.5, duration: 0.5 }}
         >
           <Image
