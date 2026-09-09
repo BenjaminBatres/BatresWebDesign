@@ -1,5 +1,7 @@
+import { TbMailFilled } from "react-icons/tb";
 import SectionHeaderSecondary from "../ui/SectionHeaderSecondary";
 import Form from "./Form";
+import Link from "next/link";
 
 export default function ContactSection() {
   return (
@@ -10,6 +12,17 @@ export default function ContactSection() {
             title="Get in touch"
             subtitle="Got a project in Mind? Let's get in touch."
           />
+          <div className="flex items-center gap-3">
+            <div className="size-15 flex justify-center items-center bg-[#ebebeb] rounded-full">
+              <TbMailFilled className="text-2xl" />
+            </div>
+            <Link
+              href={"mailto:me@benjaminbatres.dev"}
+              className="text-lg text-black! font-semibold text-[15px]"
+            >
+              me@benjaminbatres.dev
+            </Link>
+          </div>
         </div>
         <Form />
       </div>

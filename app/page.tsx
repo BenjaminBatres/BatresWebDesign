@@ -19,7 +19,6 @@ export default function Home() {
       <PricingSection />
       <WhyWorkWithMeSection />
       <FAQSection />
-      <ContactSection />
     </>
   );
 }
