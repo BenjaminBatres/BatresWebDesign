@@ -11,7 +11,7 @@ export default function HeroSection() {
     {
       path: "/contact",
       name: "Get a Free Quote",
-      theme: "bg-black text-white",
+      theme: "bg-black text-white hover:bg-black/90 duration-300",
     },
   ];
 
@@ -38,7 +38,7 @@ export default function HeroSection() {
             ))}
           </div>
         </div>
-        <Image src={HeroImg} alt="" loading="eager" className="w-150" />
+        <Image src={HeroImg} alt="hero img" loading="eager" className="w-150" />
       </div>
     </section>
   );

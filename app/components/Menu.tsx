@@ -30,7 +30,7 @@ export default function Menu({ links }: MenuProps) {
       </div>
 
       <div
-        className={`${isOpen ? "opacity-100 translate-y-0" : "opacity-0 pointer-events-none -translate-y-full"} absolute top-20 left-0 w-full duration-300 z-20`}
+        className={`${isOpen ? "max-h-105" : "pointer-events-none max-h-0"} absolute top-20 left-0 w-full duration-350 ease-linear z-20 overflow-hidden`}
       >
         <div className="bg-white p-6 border-t shadow-sm">
           <ul className="space-y-5">
@@ -40,7 +40,7 @@ export default function Menu({ links }: MenuProps) {
             <Link
               href={"/contact"}
               onClick={() => setIsOpen(false)}
-              className="sm:hidden px-6 py-2 bg-black text-white rounded-full font-semibold"
+              className="sm:hidden px-6 py-2 bg-black text-white rounded-full font-semibold hover:bg-black/90 duration-300"
             >
               Contact
             </Link>
