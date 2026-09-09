@@ -30,7 +30,7 @@ export default function Menu({ links }: MenuProps) {
       </div>
 
       <div
-        className={`${isOpen ? "max-h-105" : "pointer-events-none max-h-0"} absolute top-20 left-0 w-full duration-350 ease-linear z-20 overflow-hidden`}
+        className={`${isOpen ? "max-h-105" : "pointer-events-none max-h-0"} absolute top-16 sm:top-20 left-0 w-full duration-350 ease-linear z-20 overflow-hidden`}
       >
         <div className="bg-white p-6 border-t shadow-sm">
           <ul className="space-y-5">

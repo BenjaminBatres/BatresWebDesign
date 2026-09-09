@@ -37,7 +37,7 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className="fixed px-6 w-full bg-white z-50"
     >
-      <nav className="flex justify-between items-center max-w-300 mx-auto h-20">
+      <nav className="flex justify-between items-center max-w-300 mx-auto h-16 sm:h-20">
         <h1 className="text-2xl sm:text-3xl font-bold">
           <Link href={"/"}>BatresWebDesign</Link>
         </h1>
