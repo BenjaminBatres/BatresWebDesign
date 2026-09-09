@@ -1,6 +1,5 @@
-import Image, { StaticImageData } from 'next/image';
-
-import Link from "next/link";
+import Image, { StaticImageData } from "next/image";
+import * as motion from "motion/react-client";
 interface TProject {
   link: string;
   image: string | StaticImageData;
@@ -10,7 +9,11 @@ interface TProject {
 
 export default function Project({ link, image, title, tag }: TProject) {
   return (
-    <Link
+    <motion.a
+      initial={{ opacity: 0, y: 75 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ delay: 0.2, duration: 0.7 }}
       href={link}
       target="_blank"
       className="p-2 bg-white rounded-lg space-y-6"
@@ -19,6 +22,7 @@ export default function Project({ link, image, title, tag }: TProject) {
         <Image
           src={image}
           alt={title}
+          loading="eager"
           className="hover:scale-105 duration-500"
         />
       </figure>
@@ -28,6 +32,6 @@ export default function Project({ link, image, title, tag }: TProject) {
           {tag}
         </div>
       </div>
-    </Link>
+    </motion.a>
   );
 }

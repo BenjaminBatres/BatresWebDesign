@@ -2,7 +2,7 @@ import { FaDollarSign, FaRegHandshake } from "react-icons/fa6";
 import { GoGear } from "react-icons/go";
 import { PiStarFour } from "react-icons/pi";
 import ServiceDetails from "../ui/ServiceDetails";
-
+import * as motion from "motion/react-client";
 export default function WhyWorkWithMeSection() {
   const features = [
     {
@@ -31,17 +31,30 @@ export default function WhyWorkWithMeSection() {
   return (
     <section className="py-16 md:py-20 px-6">
       <div className="max-w-300 mx-auto space-y-12 md:space-y-16">
-        <h2 className="text-[36px] sm:text-[39px] lg:text-[49px] leading-[120%] font-bold text-center mb-6">
+        <motion.h2
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          className="text-[36px] sm:text-[39px] lg:text-[49px] leading-[120%] font-bold text-center mb-6"
+        >
           Why Work With Me
-        </h2>
-        <p className="lg:text-lg text-center max-w-lg mx-auto mb-12 lg:mb-16">
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+          className="lg:text-lg text-center max-w-lg mx-auto mb-12 lg:mb-16"
+        >
           A better website shouldn't come with unnecessary complexity or an
           agency-sized price tag.
-        </p>
+        </motion.p>
         <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-6">
           {features.map((feature, id) => (
             <ServiceDetails
               key={id}
+              id={id}
               title={feature.title}
               description={feature.description}
               icon={feature.icon}

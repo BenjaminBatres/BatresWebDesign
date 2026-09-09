@@ -2,7 +2,7 @@ import { TbMailFilled } from "react-icons/tb";
 import SectionHeaderSecondary from "../ui/SectionHeaderSecondary";
 import Form from "./Form";
 import Link from "next/link";
-
+import * as motion from "motion/react-client";
 export default function ContactSection() {
   return (
     <section id="contact" className="px-6 py-16 sm:py-20">
@@ -12,7 +12,13 @@ export default function ContactSection() {
             title="Get in touch"
             subtitle="Got a project in Mind? Let's get in touch."
           />
-          <div className="flex items-center gap-3">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className="flex items-center gap-3"
+          >
             <div className="size-15 flex justify-center items-center bg-[#ebebeb] rounded-full">
               <TbMailFilled className="text-2xl" />
             </div>
@@ -22,7 +28,7 @@ export default function ContactSection() {
             >
               me@benjaminbatres.dev
             </Link>
-          </div>
+          </motion.div>
         </div>
         <Form />
       </div>

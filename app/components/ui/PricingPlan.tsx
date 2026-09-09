@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ReactNode } from "react";
 import { FaCheck } from "react-icons/fa";
-
+import * as motion from "motion/react-client";
 interface IPlan {
   id: number;
   icon: string | ReactNode;
@@ -24,7 +24,13 @@ export default function PricingPlan({
   plan,
 }: IPlan) {
   return (
-    <div className="bg-white pt-8 px-6 pb-6 rounded-2xl border border-[#dfdfdf] space-y-8 relative md:hover:scale-105 duration-300 transition-all">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ delay: id * 0.15, duration: 0.3 }}
+      className="bg-white pt-8 px-6 pb-6 rounded-2xl border border-[#dfdfdf] space-y-8 relative md:hover:scale-105 duration-300 transition-all"
+    >
       {id === 1 && (
         <div className="absolute -top-3 left-1/3 xl:left-34 px-3 py-1 bg-black rounded-full text-white text-sm font-medium">
           Most Popular
@@ -55,6 +61,6 @@ export default function PricingPlan({
           ))}
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 }

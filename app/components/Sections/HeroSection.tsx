@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import HeroImg from "../../assets/undraw_designer_efwz.svg";
+import * as motion from "motion/react-client";
 export default function HeroSection() {
   const links = [
     {
@@ -19,14 +20,32 @@ export default function HeroSection() {
     <section className="pt-40 pb-10 sm:pb-30 px-6">
       <div className="max-w-300 mx-auto flex flex-col items-center gap-10">
         <div className="space-y-5">
-          <h2 className="text-4xl sm:text-5xl lg:text-7xl text-center font-bold max-w-xl lg:max-w-4xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="text-4xl sm:text-5xl lg:text-7xl text-center font-bold max-w-xl lg:max-w-4xl mx-auto"
+          >
             Modern Websites Built for Small Businesses
-          </h2>
-          <p className="lg:text-lg text-center max-w-md lg:max-w-2xl mx-auto">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className="lg:text-lg text-center max-w-md lg:max-w-2xl mx-auto"
+          >
             I build professional, mobile-friendly websites that help local
             businesses look credible online and turn visitors into customers.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ delay: 0.4, duration: 0.5 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
+          >
             {links.map((link, id) => (
               <Link
                 href={link.path}
@@ -36,9 +55,21 @@ export default function HeroSection() {
                 {link.name}
               </Link>
             ))}
-          </div>
+          </motion.div>
         </div>
-        <Image src={HeroImg} alt="hero img" loading="eager" className="w-150" />
+        <motion.figure
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+        >
+          <Image
+            src={HeroImg}
+            alt="hero img"
+            loading="eager"
+            className="w-150"
+          />
+        </motion.figure>
       </div>
     </section>
   );

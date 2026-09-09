@@ -1,4 +1,4 @@
-import Link from "next/link";
+import * as motion from "motion/react-client";
 import CTA from "./CTA";
 import Links from "../ui/Links";
 
@@ -33,7 +33,13 @@ export default function Footer() {
     <footer className="pt-16 md:pt-40 pb-6 bg-[#0e0e11] px-6">
       <div className="max-w-300 mx-auto space-y-16 lg:space-y-20">
         <CTA />
-        <div className="flex flex-col lg:flex-row gap-8 justify-between ">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ delay: 0.2, duration: 0.7 }}
+          className="flex flex-col lg:flex-row gap-8 justify-between "
+        >
           <div className="space-y-4">
             <h2 className="text-white/90 text-xl font-semibold">
               BatresWebDesign
@@ -51,10 +57,16 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-        </div>
-        <p className="text-white/90! text-sm">
+        </motion.div>
+        <motion.p
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "100px" }}
+          transition={{ delay: 0.3, duration: 0.7 }}
+          className="text-white/90! text-sm"
+        >
           © {new Date().getFullYear()} BatresWebDesign. All rights reserved.
-        </p>
+        </motion.p>
       </div>
     </footer>
   );

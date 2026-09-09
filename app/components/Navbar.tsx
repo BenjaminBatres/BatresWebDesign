@@ -34,7 +34,7 @@ export default function Navbar() {
     <motion.header
       initial={{ opacity: 0, y: -30 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4 }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
       className="fixed px-6 w-full bg-white z-50"
     >
       <nav className="flex justify-between items-center max-w-300 mx-auto h-20">

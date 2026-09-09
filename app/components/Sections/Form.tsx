@@ -1,9 +1,8 @@
 "use client";
-
 import { useState } from "react";
-import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { VscLoading } from "react-icons/vsc";
 import emailjs from "@emailjs/browser";
+import { motion } from "motion/react";
 type Fields = {
   name: string;
   email: string;
@@ -11,7 +10,6 @@ type Fields = {
 };
 
 export default function Form() {
-  const [error, setError] = useState(false);
   const [sucess, setSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [loading, setLoading] = useState(false);
@@ -100,7 +98,13 @@ export default function Form() {
   ];
 
   return (
-    <div className="bg-white p-6 rounded-lg space-y-6">
+    <motion.div
+      initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ delay: 0.2, duration: 0.5 }}
+      className="bg-white p-6 rounded-lg space-y-6"
+    >
       {inputFields.map((field) => (
         <div key={field.id} className="flex flex-col gap-2">
           <label className="text-sm text-black/70 font-medium tracking-[-0.5px]">
@@ -143,6 +147,6 @@ export default function Form() {
           )}
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -1,5 +1,5 @@
 import SectionHeader from "../ui/SectionHeader";
-
+import * as motion from "motion/react-client";
 export default function ProcessSection() {
   const processes = [
     {
@@ -33,9 +33,19 @@ export default function ProcessSection() {
       <div className="max-w-189 lg:max-w-300 mx-auto space-y-12 md:space-y-16">
         <SectionHeader title="Process" subtitle="Simple From Start to Finish" />
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 relative">
-          <div className="hidden lg:block absolute w-full h-0.5 bg-black top-12 -z-10" />
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ delay: 0.7, duration: 0.4 }}
+            className="hidden lg:block absolute w-full h-0.5 bg-black top-12 -z-10"
+          />
           {processes.map((process, id) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: id * 0.15, duration: 0.4 }}
               key={id}
               className="bg-white flex flex-col p-6 rounded-2xl shadow-[12px_17px] border border-[#dfdfdf] hover:border-black duration-500 hover:scale-105"
             >
@@ -46,7 +56,7 @@ export default function ProcessSection() {
                 {process.title}
               </h2>
               <p className="tracking-[-0.5px]">{process.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
