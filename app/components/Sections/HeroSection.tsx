@@ -9,7 +9,7 @@ export default function HeroSection() {
       theme: "bg-white text-black border",
     },
     {
-      path: "#contact",
+      path: "/contact",
       name: "Get a Free Quote",
       theme: "bg-black text-white",
     },

@@ -96,7 +96,7 @@ export default function PricingSection() {
                 <h3 className="text-[30px] font-bold mb-2">{plan.price}</h3>
                 <p className="text-sm mb-4">/ {plan.period}</p>
                 <Link
-                  href={"#contact"}
+                  href={"/contact"}
                   className="bg-black text-white px-6 py-3 rounded-lg font-semibold text-sm w-full text-center"
                 >
                   {plan.buttonText}
