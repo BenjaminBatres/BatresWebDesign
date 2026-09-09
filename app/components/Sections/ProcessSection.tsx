@@ -32,7 +32,7 @@ export default function ProcessSection() {
     <section id="process" className="py-16 md:py-20 px-6">
       <div className="max-w-189 lg:max-w-300 mx-auto space-y-12 md:space-y-16">
         <SectionHeader title="Process" subtitle="Simple From Start to Finish" />
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-10 relative">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-6 xl:gap-10 relative">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
