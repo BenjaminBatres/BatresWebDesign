@@ -9,7 +9,7 @@ const projectInfo = [
     description:
       "Calle Heat is a modern, responsive web application for an urban taco food truck, featuring a full street-food menu, interactive weekly schedule, catering showcase, and gallery.",
     image: CalleHeat,
-    link: "https://calle-street.vercel.app/",
+    link: "https://calle-heat.vercel.app/",
     tag: "Food Truck",
   },
   {
