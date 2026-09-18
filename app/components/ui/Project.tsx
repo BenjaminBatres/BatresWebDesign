@@ -33,14 +33,14 @@ export default function Project({
           className="hover:scale-105 duration-500"
         />
       </figure>
-      <div className="px-4 pb-4 space-y-3">
+      <div className="px-4 pb-4">
         <div className="flex flex-col lg:flex-row gap-4 lg:gap-0 items-center justify-between">
           <h3 className="text-[25px] font-bold">{title}</h3>
           <div className="bg-[#ebebeb] text-sm px-4 py-1.5 rounded-full font-semibold">
             {tag}
           </div>
         </div>
-        <p className="text-sm text-center md:text-left">{description}</p>
+        {/* <p className="text-sm text-center md:text-left ">{description}</p> */}
       </div>
     </motion.a>
   );
